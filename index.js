@@ -14,7 +14,7 @@ app.use(cors());
 // Habilitar express.json
 app.use(express.json({extended: true}));
 
-const PORT = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 
 // Importar rutas
 app.use('/api/usuarios',require('./routes/usuarios'));
@@ -23,6 +23,6 @@ app.use('/api/proyectos',require('./routes/proyectos'));
 app.use('/api/tareas',require('./routes/tareas'));
 
 //arracar la app
-app.listen(PORT,()=>{
-     console.log(`El seridor esta funcionan en el pueto ${PORT}`);
+app.listen(port,'0.0.0.0',()=>{
+     console.log(`El seridor esta funcionan en el pueto ${port}`);
 });
